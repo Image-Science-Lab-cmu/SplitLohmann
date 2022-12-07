@@ -6,9 +6,12 @@ import cv2
 import copy
 from params import Params
 
-def digitize(dmap, numDepths):
-    diopterBins = np.linspace(np.min(dmap),np.max(dmap),numDepths)
-    dig = np.digitize(dmap, diopterBins) - 1
+def digitize(diopter_map, numDepths):
+    '''
+    Discretize input diopter_map to numDepths different depths.
+    '''
+    diopterBins = np.linspace(np.min(diopter_map),np.max(diopter_map),numDepths)
+    dig = np.digitize(diopter_map, diopterBins) - 1
     return diopterBins[dig]
 
 def load_images(load_path, discretize=False, numdepths=None,
@@ -110,8 +113,8 @@ def fit_images(H, texture_map, diopter_map, oled_shape, slm_shape):
 
 def compute_phase_mask(diopterMap, params, name, modNum=1):
     '''
-    Computes the phase mask with the desired working range to align
-    the eyepiece.
+    Computes the phase mask from the normalized diopter map with the desired
+    working range.
     '''
     # fit diopter range
     diopterMap = diopterMap * params.W
