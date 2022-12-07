@@ -1,7 +1,7 @@
 # Computing Images to Display on OLED and SLM
 
 ### Requirements
-python 3.6 and above, `numpy`, `skimage`, `opencv`
+`python 3.6` or above, `numpy`, `skimage`, `opencv`
 
 ### Usage
 Run in this folder
