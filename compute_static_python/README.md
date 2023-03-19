@@ -1,10 +1,16 @@
 # Computing Images to Display on OLED and SLM
 
-This folder demonstrates the computation needed to display a 3D scene in Split-Lohmann Display.
+This folder demonstrates the computation needed for 1 static 3D scene for Split-Lohmann Display.
 
 The inputs to the pipeline are two images, one RGB image in uint8, and a grayscale depth map image in uint8.
 
-The outputs to the two displays are two images, the warpped RGB image in uint8, and the warpped and computed phase mask image in uint8.
+The outputs to the two displays are three images, the warpped RGB image in uint8, the warpped depth image in uint8, and the warpped and computed phase mask image in uint8.
+
+Note that what we actually need and show on the two displays (the display code is not included), OLED and SLM, are:
+- the warpped RGB image, and 
+- the warpped and computed phase mask image.
+
+All codes are in python.
 
 ### Requirements
 `python 3.6` or above, `numpy`, `skimage`, `opencv`
