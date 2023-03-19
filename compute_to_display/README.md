@@ -1,6 +1,6 @@
 # Computing Images to Display on OLED and SLM
 
-This folder demonstrates the computation needed to display a scene in Split-Lohmann Display.
+This folder demonstrates the computation needed to display a 3D scene in Split-Lohmann Display.
 
 The inputs to the pipeline are two images, one RGB image in uint8, and a grayscale depth map image in uint8.
 
