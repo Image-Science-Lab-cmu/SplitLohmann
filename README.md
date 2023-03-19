@@ -1,6 +1,6 @@
-# SplitLohmannVR_Code
+# SplitLohmannVRCode
 
-This folder demonstrates the computation needed to display 3D scenes in Split-Lohmann Display.
+This repository demonstrates the computation needed to display 3D scenes in Split-Lohmann Display.
 
 The inputs to the pipeline are two images, one RGB image in uint8, and a grayscale depth map image in uint8.
 
