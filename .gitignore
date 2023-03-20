@@ -1,0 +1,10 @@
+.DS_Store
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+log.txt
+*.o
+*.db
+*.dll
+*.pyc
+
