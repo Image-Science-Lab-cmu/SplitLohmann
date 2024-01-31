@@ -1,0 +1,13 @@
+function focal_stack_mono = interp_for_camera(u8_stack_total, sim)
+
+    focal_stack_mono = zeros(sim.cam_resolution(1), ...
+                        sim.cam_resolution(2), ...
+                        sim.num_focus_images);
+
+    for ii=1:sim.num_focus_images
+        focal_stack_mono(:,:,ii) = interp2( ...
+                        sim.x8, sim.y8, u8_stack_total(:,:,ii), ...
+                        sim.X9, sim.Y9, 'nearest', 0);
+    end
+    
+end
