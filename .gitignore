@@ -1,4 +1,5 @@
 *.DS_Store
+*.asv
 CMakeCache.txt
 CMakeFiles
 cmake_install.cmake

@@ -38,7 +38,7 @@ All simulation codes are in MATLAB. The simulation is based on wave optics.
 ### Run Simulation
 
 To reproduce our simulation results, run `runsim.m` inside this folder.\
-Running the code as-is produces the example focal stack result shown below.
+Running the code as-is produces the example focal stack result shown below, with fewer iterations.
 
 ### Simulation I/O
 Input: they are `mat` files containing RGBD images loaded from the `scenes/` folder.\
@@ -47,12 +47,10 @@ Output: they are simulated focal stacks saved to the `results/` folder.
 ### Simulation Modes and Flags
 
 Two simulation modes are available in `runsim.m`:
-- `mode = 1`: coarse resolution, few iterations, quick and dirty
-    - *takes 3 minutes for four camera focus settings*
-    - *tested on Apple M2 Max, 96GB RAM*
-- `mode = 2`: fine resolution, more iterations, avoids aliasing
-    - *takes 1 hour for four camera focus settings*
-    - *tested on Intel Xeon CPU E5-2640 v4 @ 2.40GHz, 128 GB RAM*
+- `mode = 1`: coarse resolution, few iterations, quick and dirty *(takes 3 minutes)*
+- `mode = 2`: fine resolution, more iterations, avoids aliasing *(takes 43 minutes)*
+
+Each runtime is from a simulation for four camera focus settings, run on Apple M2 Max 96GB RAM. Reducing the number of camera focus images will speed up the runtime.
 
 Two flags are available:
 - `flags.color`: when `true`, simulates RGB channel content (using the same wavelength); when `false`, simulates the green channel only; default is `true`.

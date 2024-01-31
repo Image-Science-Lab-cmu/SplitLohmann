@@ -5,12 +5,12 @@ addpath('functions');
 
 %%% ====================// Select simulation mode //=======================
 % mode = 1: coarse resolution, few iterations, quick and dirty (3 min)
-% mode = 2: fine resolution, more iterations, avoids aliasing (1 hour)
+% mode = 2: fine resolution, more iterations, avoids aliasing (43 min)
 % runtime is approximate (tested on Apple M2 Max 96GB RAM)
 mode = 1;
 
 %%% =========================// Select scene //============================
-% Scenes: Whiskey, Metacar, Chessboard, Motorcycle, Lotus, CastleCity
+% Scenes: Whiskey, Motorcycle, CastleCity
 % Scene files are stored in the scenes/ folder
 scene_name = "Whiskey";
 
